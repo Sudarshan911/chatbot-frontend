@@ -1,0 +1,119 @@
+.card {
+    background: inherit;
+    border: none;
+    height: 85vh;
+    opacity: 0.9;
+}
+
+/* .text-wrap {
+    word-wrap: break-word;
+} */
+
+.chatbot-container {
+    height: 98vh; /* Viewport Height: 100% of the viewport height */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;  */
+    
+}
+
+.chatbot-messages {
+    flex-grow: 1; /* Allows the message area to grow and fill available space */
+    overflow-y: auto; /* Scrollable */
+    /* Other styling as required */
+}
+
+
+.loading-dots {
+    font-size: 24px;
+    color: #333; /* Change color as needed */
+  }
+
+  .loading-animation::after {
+    content: " .";
+    animation: loading-dots 1s infinite;
+  }
+
+  @keyframes loading-dots {
+    0% { content: " ."; }
+    25% { content: " .."; }
+    50% { content: " ..."; }
+    75% { content: " .."; }
+    100% { content: " ."; }
+  }
+
+  .userMessage{
+    background-color: #5d055d;
+    width: 40%;
+    font-weight:  100 !important;;
+
+  }
+
+  .botMessage{
+    width: 50%;
+
+  }
+
+  .cardBotResponse{
+    width: 60%;
+  }
+
+  
+  .cardBotResponse pre{
+    font-family: 'sans-serif' 
+   }
+
+   .badge-custom{
+    /* font-weight: bold; */
+    font-weight:  500 !important;
+   }
+
+   .initialPage {
+    min-height: 30vw;
+    font-weight: bold;
+   }
+
+   .documentSection {
+    white-space: pre-line;
+    font-family: 'sans-serif' 
+
+   }
+
+   .loader {
+    /* the colors */
+    --c1: #F77825;
+    --c2: #D3CE3D;
+    --c3: #60B99A;
+    --c4: #554236;
+    /**/
+    
+    width: 100px; /* control the size */
+    aspect-ratio: 8/5;
+    --_g: no-repeat radial-gradient(#000 68%,#0000 71%);
+    -webkit-mask: var(--_g),var(--_g),var(--_g);
+    -webkit-mask-size: 25% 40%;
+    background: 
+      conic-gradient(var(--c1) 50%,var(--c2) 0) no-repeat,
+      conic-gradient(var(--c3) 50%,var(--c4) 0) no-repeat;
+    background-size: 200% 50%;
+    animation: 
+      back 4s infinite steps(1),
+      load 2s infinite;
+  }
+  
+  @keyframes load {
+    0%    {-webkit-mask-position: 0% 0%  ,50% 0%  ,100% 0%  }
+    16.67%{-webkit-mask-position: 0% 100%,50% 0%  ,100% 0%  }
+    33.33%{-webkit-mask-position: 0% 100%,50% 100%,100% 0%  }
+    50%   {-webkit-mask-position: 0% 100%,50% 100%,100% 100%}
+    66.67%{-webkit-mask-position: 0% 0%  ,50% 100%,100% 100%}
+    83.33%{-webkit-mask-position: 0% 0%  ,50% 0%  ,100% 100%}
+    100%  {-webkit-mask-position: 0% 0%  ,50% 0%  ,100% 0%  }
+  }
+  @keyframes back {
+    0%,
+    100%{background-position: 0%   0%,0%   100%}
+    25% {background-position: 100% 0%,0%   100%}
+    50% {background-position: 100% 0%,100% 100%}
+    75% {background-position: 0%   0%,100% 100%}
+  }
